@@ -1,6 +1,9 @@
 # HTML-CSS-first-project: Counter-Strike 2 Fan Page 🎮
 
-This project was an assignment to build a simple website using HTML with multiple sections and CSS for styling. I decided to create a Counter-Strike 2 fan page. The main page layout is based on the official CS2 website because I found it visually appealing, while the rest of the pages were designed and built by me. Most images and GIFs are taken from the official CS2 site.
+Este proyecto fue una práctica diseñada para construir un sitio web multi página utilizando solo HTML5 y CSS3. Decidí crear una fan page de Counter-Strike 2. Mientras que el diseño de la página principal está inspirado en la estética del sitio oficial de CS2 por su atractivo visual, el resto de las secciones han sido diseñadas y desarrolladas por mí. La mayoría de las imágenes y GIFs utilizados han sido extraídos de las fuentes oficiales de CS2.
+
+## 📝 Nota sobre el desarrollo
+Este proyecto se desarrolló como una de las primeras prácticas del curso, con el objetivo principal de asentar los conocimientos de **maquetación estructural y selectores CSS**. Por ello, el diseño está optimizado para su visualización en escritorio (desktop) y no incluye adaptabilidad responsive, ya que se centra exclusivamente en los fundamentos de la jerarquía visual fija.
 
 ## 🚀 Demo en vivo
 Puedes ver el sitio funcionando aquí: 
