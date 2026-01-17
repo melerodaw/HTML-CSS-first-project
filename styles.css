@@ -1,0 +1,686 @@
+/* Variables de colores */
+:root {
+  --color-fondo: #0A0F1E;              
+  --color-fondo-secundario: #1B253D;   
+
+  --color-acento-azul: #4A90E2;         
+  --color-acento-naranja: #FF8C42;      
+
+  --color-texto: #FFFFFF;               
+  --color-texto-secundario: #D1D5DB;    
+
+  --color-borde: #2E3A59;         
+}
+
+
+/* Reset de estilos por defecto de la página*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Oswald', sans-serif; 
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.5; /* Interlineado */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-image: url(./media/bg/bgGray.svg);
+}
+
+.logo {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--color-fondo-secundario);
+    text-decoration: none;
+    transition: color 0.2s; /* Suaviza el cambio de color */
+    font-size: 18px;
+    
+}
+
+nav li{
+    margin: 0px; /* Elimino el margen porque luego creo unos generales para los li */
+}
+
+nav a:hover {
+    color: var(--color-acento-azul);
+}
+
+/* === REFACTORIZACION SECTION Y SECTION > DIV */
+section {
+    background-size: cover;
+    padding: 60px 0;
+}
+
+section:nth-last-of-type(1),
+section:nth-last-of-type(3) { 
+    background-image: url(./media/bg/bgDarkBlue.svg);
+}
+
+section:nth-last-of-type(2){
+    background-image: url(./media/bg/bgGray.svg);
+}
+
+section > div {
+    background-color: var(--color-fondo-secundario);
+    max-width: 1200px;
+    padding: 40px 80px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* === === */
+
+.intro{
+    background-image: url(./media/bg/bgOrange.svg);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.intro div{
+    width: 1000px;
+    background-color: var(--color-fondo-secundario);
+}
+
+/* Estilos de texto */
+
+h1 {
+    color: var(--color-texto);
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2{
+    color: var(--color-acento-naranja);
+    margin-bottom: 10px;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+h3 {
+    color: var(--color-acento-azul);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h4{
+    color: var(--color-texto);
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+li{
+    color: var(--color-texto-secundario);
+    margin-left: 1rem;
+    margin-bottom: 8px;
+}
+
+abbr{
+    cursor: help;
+}
+
+strong {
+    color: var(--color-acento-naranja);
+    font-size: 1.1rem;
+}
+
+div p{ /* no quiero que el p del footer tenga margen abajo asi que div p */
+    color: var(--color-texto-secundario);
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+div h2+p { /* Si hay un p justo despues de un h2 en un div */
+    max-width: 800px;
+    margin: auto;
+}    
+
+/* Secciones index.html */
+
+/* Seccion Intro index*/
+#intro-index {
+    background-image: url(./media/bg/header_bg.svg);
+    background-size: cover;
+    display: flex;              /* pone la img al lado de div */       
+    align-items: center;        /* centra verticalmente */
+    justify-content: center;    /* centra horizontalmente */
+    text-align: center;         /* centra el texto */
+    padding: 20px 20px 0 20px;  /* relleno, pero abajo no para que queda la imagen ahi guapa al borde */
+    height: 95vh;
+}
+
+#intro-index h1 {
+    margin: 0;
+}
+
+#intro-index div {  /* Para que no coja otro heredado */
+    background-color: transparent;
+}
+
+#intro-index img {
+    width: 50%;
+    align-self: flex-end;
+}
+
+#intro-index h1 {
+    color: var(--color-fondo); /* color oscuro para contraste */
+}
+
+#intro-index p {
+    color: var(--color-fondo);
+    font-size: 1.25rem;
+}
+
+#novedades {
+    background-image: url(./media/bg/bgDarkBlue.svg);
+    background-size: cover;
+}
+
+#novedades > div {
+    max-width: 1200px;
+    margin: 0px auto;
+    background-color: var(--color-fondo-secundario);
+    padding: 40px 80px;
+    text-align: center;
+}
+
+.div-vid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#efectos {
+    background-image: url(./media/bg/bgGray.svg);
+    background-size: cover;
+}
+
+#efectos > div {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: var(--color-fondo-secundario);
+    padding: 40px 80px;
+    text-align: center;
+}
+
+video {
+    width: 60%;
+    padding: 40px;
+}
+
+#audio {
+    background-image: url(./media/bg/bgDarkBlue.svg);
+    background-size: cover;
+}
+
+#audio > div {
+    max-width: 1200px;
+    margin: 0px auto;
+    background-color: var(--color-fondo-secundario);
+    padding: 40px 80px;
+    text-align: center;
+}
+
+#audio img {
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+
+
+/* Secciones mapas.html */
+section.mapas{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+.div-mapas {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.div-mapas img{
+    width: 100%; /* Ocupa el máximo de su bloque */
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+.div-mapas figure img:hover {
+    transform: scale(1.1);     /* agranda 10% */
+    transition: all 0.25s ease; 
+}
+
+/* secciones fundamentos.html */
+
+
+.fundamentos-movimiento > div{
+    padding: 0;
+}
+
+.fundamentos-movimiento h2{
+    padding: 40px 0;
+    text-align: center;
+}
+
+.item {
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--color-borde);    
+}
+.item:nth-of-type(even) {
+    text-align: right;
+    border-right: var(--color-acento-naranja) 4px solid;
+}
+.item:nth-of-type(odd) {
+    text-align: left;
+    border-left: var(--color-acento-naranja) 4px solid;
+}
+.item > div { /* Div de imágenes del item "Velocidad" (el unico item que usa div dentro) */
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.item figure img{
+    width: 100%;
+    margin-top: 10px;
+}
+.item figcaption{
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Sección fisicas */
+
+#fisicas-intro{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.fisica-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+.fisica-item > div{ /* Div que agrupa titulo y texto dentro de cada item*/
+    width: 60%;
+    margin: 20px;
+    border-bottom: var(--color-borde) 1px solid;
+}
+#fisicas-intro{
+    border-bottom: var(--color-borde) 1px solid;
+}
+.fisica-item:last-child > div{ /* El último no tiene borde */
+    border-bottom: none;
+}
+
+.fisica-item > img{
+    height: 180px;
+    border-radius: 8px;
+    margin: auto;
+}
+
+/* Sección Roles */
+
+#roles > div {  /* Espacio entre titulo e items (imgs) */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#roles-items {  /* Espacio entre los items (imgs) */
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+#roles img {
+    max-width: 200px;
+}
+
+.rol-item {
+    border: var(--color-borde) 2px solid;
+    border-radius: 8px;
+    padding: 10px 5px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.rol-item:hover {
+    border-color: var(--color-acento-naranja);
+    /* Sombra al borde, 1er valor: sombra derecha, 2º valor: sombra abajo, 3er valor: difuminado */
+    box-shadow: 0px 0px 10px var(--color-acento-naranja);   
+    transform: translateY(-8px) /* Sube 8px */;
+    transition: all 0.2s ease; /* Suaviza las transiciones */
+}
+
+
+/* Página armas y utilidades CS2. Economia */
+
+/* Seccion armas */
+
+#armas > div {
+    padding: 40px 20px;
+}
+
+#armas > div h3+p {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#armas > div > div:nth-of-type(n+2){  /* Selecciona todos los divs menos el primero (h2 y p) y menos el grid */
+    padding: 5% 0;
+    border-bottom: var(--color-borde) 2px solid;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columnas de igual tamaño */
+    gap: 16px;
+    border-bottom: var(--color-borde) 2px solid;
+}
+
+.arma-tipo{
+    background-color: var(--color-fondo);
+    border-radius: 14px;
+    text-decoration: none; /* Elimino el subrayado de los enlaces */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: var(--color-acento-naranja) 2px solid;
+}
+
+.arma-tipo:hover{
+    background-color: #335; /* Utilicé el gris 333 que usé antes y le subí un poco el azul */ 
+    transition: all 0.2s ease;
+}
+
+.arma-tipo img:first-child{ /* Primera imagen (icono tipo arma) */
+    width: 50px;
+}
+
+.flecha{ /* Segunda imagen (flecha) */
+    width: 14px;
+    height: 14px;
+}
+
+.arma-tipo span{
+    font-size: 1.5rem;
+    color: var(--color-texto-secundario);
+}
+
+.wrap{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.arma-item{
+    width: 14.943%;
+    border: var(--color-borde) 2px solid;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.arma-item:hover{
+    border-color: var(--color-acento-azul);
+    box-shadow: 0px 0px 10px var(--color-acento-azul);
+    transition: all 0.2s ease;
+}
+
+.arma-item p {  /* Ambos texto en item de cada arma */
+    padding: 10px;
+    margin: 0;  /* Elimina margen por defecto */
+    background-color: var(--color-fondo);
+    padding: 10px;
+}
+
+.arma-item p:first-child{   /* Titulo del arma */
+    font-size: 1.1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.arma-item p:last-child{    /* Precio del arma */
+    font-size: 0.9rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.arma-item img{
+    width: 100%;
+    padding: 8px;
+}
+
+#utilidades > div { /* Alinear bloques y corregir paddings de divs */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#utilidades h3 {
+    margin-top: 40px;   
+}
+
+#intro-list li {
+  display: flex; /* utilizo flexbox para alinear la imagen y el texto */
+  align-items: center;
+  gap: 10px; /* espacio entre la imagen y el texto */
+}
+
+#intro-list img.icono {
+  width: 70px;   /* tamaño de la imagen */
+}
+
+/*
+ul {
+   list-style: none; al parecer haciendo pruebas el display flex ya quita los bullets de la lista
+}
+*/
+
+
+#div-list-tips {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#div-list-tips > div {
+    width: 25%;
+}
+
+/* Seccion economia */
+
+#economia > div {
+    text-align: left;
+}
+
+#economia h2{
+    text-align: center;
+}
+
+#economia h3 {
+    margin-top: 40px;   
+}
+
+#economia h4{
+    margin-top: 30px;
+}
+
+#economia img{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.tip-box {
+    border-left: var(--color-acento-naranja) 2px solid;
+    box-shadow: 0px 0px 5px var(--color-borde);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* Secciones comunidad.html */
+
+#escena-imagenes {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+#escena-imagenes figure {
+    width: 25%;
+}
+
+#escena-imagenes figure img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.team{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.team-item{
+    width: 28%;
+}
+
+.team-item img{
+    max-height: 100px;
+}
+
+#comunidad h3{
+    margin-top: 60px;
+}
+
+/* Sección skins */
+
+#skins h3 {
+    margin-top: 40px
+}
+
+#skins ul {
+    display: flex;
+    margin: 20px 0;
+    gap: 20px;
+    list-style: none;
+}
+
+#skins li {
+    width: 30%;
+    border-radius: 8px;
+    margin: 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#skins img{
+    width: 100%;
+}
+
+#skins li:hover {
+    transition: all 0.2s ease;  /* Suaviza la transición del hover para todos*/
+}
+
+#mil-spec {
+    border: #4A90E2 2px solid;
+}
+#mil-spec:hover {
+    box-shadow: 0px 0px 10px #4A90E2;
+    background-color: #4A90E233;
+}
+
+#restricted {
+    border: #8847ff 2px solid;
+}
+#restricted:hover {
+    box-shadow: 0px 0px 10px #8847ff;
+    background-color: #8847ff33;
+}
+
+#classified {
+    border: #d32ce6 2px solid;
+}
+#classified:hover {
+    box-shadow: 0px 0px 10px #d32ce6;
+    background-color: #d32ce633;
+}
+
+#covert {
+    border: #eb4b4b 2px solid;
+}
+#covert:hover {
+    box-shadow: 0px 0px 10px #eb4b4b;
+    background-color: #eb4b4b33;
+}
+
+#golden {
+    border: #b9932e 2px solid;
+}
+#golden:hover {
+    box-shadow: 0px 0px 10px #b9932e;
+    background-color: #b9932e33;
+}
+
+#skins-graficos  {
+    display: flex;
+    justify-content: center;
+}
+
+#skins-graficos figure {
+    width: 50%;
+    margin: 0 20px;
+}
+
+/* Sección updates */
+
+#updates h3{
+    margin-top: 30px;
+}
+
+#updates em{
+    display: block; /* Sin esto, el margin no funciona bien, ya que em es inline por defecto */
+    margin-bottom: 4px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px ;
+    color: var(--color-texto-secundario);
+}
+
+footer div { 
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer p{
+    margin: 0;
+}
